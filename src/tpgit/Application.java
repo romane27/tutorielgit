@@ -15,13 +15,13 @@ public class Application extends Frame implements WindowListener{
 	public Application() {
 		super();
 		
-		Modèle modl = new Modèle();
-		Contrôleur ctrl = new Contrôleur(modl); 
+		Modele modl = new Modele();
+		Controleur ctrl = new Controleur(modl); 
 		Vue vue = new Vue();
 		modl.addObserver(vue);
 		vue.addActionListener(ctrl);
 		this.addWindowListener(this);
-		
+		this.setLocationRelativeTo(this);
 		this.add(vue);
 		this.pack();
 		this.setVisible(true);
