@@ -22,6 +22,7 @@ public class Application extends Frame implements WindowListener{
 		vue.addActionListener(ctrl);
 		this.addWindowListener(this);
 		
+		this.setSize(220, 220);
 		this.add(vue);
 		this.pack();
 		this.setVisible(true);
